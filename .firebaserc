@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "applogin-6fa3c": {
+      "hosting": {
+        "appLogin": [
+          "applogin-6fa3c"
+        ]
+      }
+    }
+  }
+}
