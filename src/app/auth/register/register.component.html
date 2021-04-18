@@ -3,15 +3,16 @@
       <div class="card text-white" style="background-color: rgb(0 0 0 / 88%);">
         <div class="card-body">
             <h5 class="card-title text-center">REGISTRASE</h5>
-          <form>
+            <!-- Se crea el form group que controla el formulario de registro desde el register.component.ts -->
+          <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
             <div class="form-group mt-5 ">
               <label for="email" >Correo Electronico</label>
-              <input type="email" placeholder="Correo Electronico" class="form-control" />
+              <input type="email" placeholder="Correo Electronico" class="form-control" formControlName="email" />
               <p class="fst-italic">*No compartiremos su dirección de correo electronico con nadie mas.</p>
             </div>
             <div class="form-group " style="margin-top: 1rem;">
               <label for="password" >Contraseña</label>
-              <input type="password" placeholder="Contraseña" class="form-control" />
+              <input type="password" placeholder="Contraseña" class="form-control" formControlName="password" />
             </div>
             <!-- Esta parte aun no se va a ocupar -->
             <!-- <div class="form-group " style="margin-top: 1rem;">
@@ -25,6 +26,9 @@
           </form>
           <div class="form-group mt-4">
             <p>¿Ya tiene una cuenta? <a [routerLink]="['/login']">Iniciar Sesión</a></p>
+          </div>
+          <div class="form-group mt-4">
+            <p>O inicie sesion con: </p>
           </div>
         </div>
       </div>
