@@ -19,7 +19,13 @@ export class NavbarComponent implements OnInit {
     this.user =  this.authSvc.getCurrentUser();
     if (this.user) {
       this.isLogged=true;
+      console.log(this.user)
     }
+  }
+
+  logout() {
+    this.authSvc.logout();
+  
   }
 
 }
